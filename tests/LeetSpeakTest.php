@@ -69,6 +69,19 @@
             //Assert
             $this->assertEquals("S417z", $result);
         }
+
+        function test_makeLeetSpeak_o()
+        {
+            //Arrange
+            $test_LeetSpeak = new LeetSpeak;
+            $input = "Woop";
+
+            //Act
+            $result = $test_LeetSpeak->makeLeetSpeak($input);
+
+            //Assert
+            $this->assertEquals("W00p", $result);
+        }
     }
 
 ?>
