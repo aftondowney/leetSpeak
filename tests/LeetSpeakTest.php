@@ -22,13 +22,52 @@
         {
             //Arrange
             $test_LeetSpeak = new LeetSpeak;
-            $input = "Iliad";
+            $input = "Ill";
 
             //Act
             $result = $test_LeetSpeak->makeLeetSpeak($input);
 
             //Assert
-            $this->assertEquals("111ad", $result);
+            $this->assertEquals("111", $result);
+        }
+
+        function test_makeLeetSpeak_t()
+        {
+            //Arrange
+            $test_LeetSpeak = new LeetSpeak;
+            $input = "put";
+
+            //Act
+            $result = $test_LeetSpeak->makeLeetSpeak($input);
+
+            //Assert
+            $this->assertEquals("pu7", $result);
+        }
+
+        function test_makeLeetSpeak_a()
+        {
+            //Arrange
+            $test_LeetSpeak = new LeetSpeak;
+            $input = "pack";
+
+            //Act
+            $result = $test_LeetSpeak->makeLeetSpeak($input);
+
+            //Assert
+            $this->assertEquals("p4ck", $result);
+        }
+
+        function test_makeLeetSpeak_s()
+        {
+            //Arrange
+            $test_LeetSpeak = new LeetSpeak;
+            $input = "Salts";
+
+            //Act
+            $result = $test_LeetSpeak->makeLeetSpeak($input);
+
+            //Assert
+            $this->assertEquals("S417z", $result);
         }
     }
 
